@@ -149,7 +149,7 @@ public class Character : MonoBehaviour
 
         if (stage.isWinStage)
         {
-            Win(stage.transform);
+            WinAction(stage.transform);
         }
     }
     protected void ChangeAnim(string animName)
@@ -182,7 +182,7 @@ public class Character : MonoBehaviour
         characterColl.enabled = true;
     }
 
-    public virtual void Win(Transform winpos)
+    public virtual void WinAction(Transform winpos)
     {
         isVitory = true;
         characterRb.isKinematic = true;

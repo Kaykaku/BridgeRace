@@ -112,10 +112,13 @@ public class Enemy : Character
         base.Death();
     }
 
-    public override void Win(Transform winpos)
+    public override void WinAction(Transform winpos)
     {
-        base.Win(winpos);
+        base.WinAction(winpos);
         navMeshAgent.destination = winpos.position;
         navMeshAgent.acceleration = 300;
+        GameManager.Ins.Lose();
     }
+
+
 }

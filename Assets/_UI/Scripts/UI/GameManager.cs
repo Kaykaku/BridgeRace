@@ -62,6 +62,11 @@ public class GameManager : Singleton<GameManager>
         UIManager.Ins.OpenUI<Win>();
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void Lose()
     {
         UIManager.Ins.OpenUI<Lose>();

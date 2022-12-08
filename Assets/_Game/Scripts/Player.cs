@@ -59,5 +59,15 @@ public class Player :Character
         ClearBrick();
         StartCoroutine(StandUp());
     }
+    public override void Death()
+    {
+        base.Death();
+        GameManager.Ins.Lose();
+    }
 
+    public override void WinAction(Transform winpos)
+    {
+        base.WinAction(winpos);
+        GameManager.Ins.Win();
+    }
 }
